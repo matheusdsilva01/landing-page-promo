@@ -5,8 +5,9 @@ body{
     background-color: #2D2B66;
     background-image: url("../img/image.png");
     background-repeat: no-repeat;
-    min-width: 470px;
     background-size: cover;
+    background-position-x: center;
+    min-width: 470px;
     color: #fff;
     display: grid;
     align-items: center;    
@@ -27,11 +28,9 @@ section > :is(h1){
     font-family: 'Crete Round', serif;
     font-size: 50px;
     font-weight: normal;
-    /* separar as letras uma das outras */
     letter-spacing: 1px;
 }
 section > :is(h2,h3,h4){
-    /* letra mais fina */
     font-weight: lighter;
 }
 input{
@@ -41,11 +40,18 @@ input{
     background-color: #C9C9C9;
     color: #0C0C0C;
     padding: 20px 0 20px 0;
+    font-size: 20px;
 }
 #submit{
     background-color: #D41717;
     color: #fff;
     cursor: pointer;
+    
+}
+
+#submit:hover{
+    transition: 0.1s ease-in-out;
+    transform: scale(1.1);
 }
 
 /* modal */
@@ -58,8 +64,16 @@ input{
     align-items: center;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
+}
+
+.modal{
+    width: 60%;
+    background-color: #fff;
+    color: #0C0C0C;
+    position: relative;
+    min-width: 300px;
 }
 
 .modal-container.mostrar{
@@ -81,14 +95,6 @@ input{
     animation: mostrarModal .3s ease-in-out;
 }
 
-.modal{
-    width: 60%;
-    background-color: #fff;
-    color: #0C0C0C;
-    position: relative;
-    min-width: 300px;
-}
-
 .fechar{
     position: absolute;
     top: 10px;
@@ -99,4 +105,10 @@ input{
     height: 30px;
     border: 1px solid #0C0C0C;
     background-color: #2D2B6650;
+}
+
+@media screen and (max-width: 728px){
+    body{
+    grid-template-columns: 1fr;
+    }
 }
