@@ -57,6 +57,7 @@ input{
 /* modal */
 
 .modal-container{
+    z-index: 100;
     position: fixed;
     background-color: #2d2b6650;
     display: none;
@@ -64,7 +65,7 @@ input{
     align-items: center;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100%;
 }
 
