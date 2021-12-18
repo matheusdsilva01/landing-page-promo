@@ -1,3 +1,7 @@
+*{
+margin:0px;
+padding:0px;
+}
 body{
     box-sizing: border-box;
     margin:0px;
@@ -7,7 +11,6 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;
-    min-width: 470px;
     color: #fff;
     display: grid;
     align-items: center;    
@@ -115,5 +118,6 @@ input{
 @media screen and (max-width: 728px){
     body{
     grid-template-columns: 1fr;
+    padding: 0px;
     }
 }
